@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Fotografer Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Khansa Rayyani</h1>
+        <p>Fotografer Profesional | Spesialis Potret & Landscape</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Khansa Rayyani adalah seorang fotografer profesional yang telah menekuni dunia fotografi selama lebih dari 10 tahun. Berbekal pengalaman dan dedikasi tinggi dalam bidang ini, ia telah menghasilkan berbagai karya fotografi yang mencakup potret, pernikahan, komersial, hingga dokumenter.</h2>
+            <p>.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Galeri</h2>
+            <img src="foto uts .jpg" alt="Acara Pernikahan" />
+            <img src="foto uts 2.jpg" alt="Acara Pernikahan" />
+        </section>
+
+        <section id="social">
+            <h2>Media Sosial</h2>
+            <ul>
+                <li><a href="https://instagram.com/khansarayyani" target="_blank">Instagram</a></li>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Khansa Rayyani. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>
