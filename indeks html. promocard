@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PromoCard Landing Page - Neon Glassmorphism</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+  /* Background */
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #04010e 0%, #1b1a27 100%);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Glassmorphic Card */
+  .promo-card {
+    position: relative;
+    width: 320px;
+    border-radius: 20px;
+    padding: 2rem 1rem 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 0 15px rgba(245, 18, 185, 0.05),
+      0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    color: #e0e0ff;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .promo-card:hover {
+    transform: translateY(-12px);
+    box-shadow:
+      0 0 20px #77aaff,
+      0 0 40px #ea3ade,
+      0 0 60px #f112fd;
+  }
+
+  /* Neon Shadow SVG effect */
+  .promo-image {
+    border-radius: 15px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: drop-shadow(0 0 8px #77aaff);
+    transition: filter 0.3s ease;
+  }
+  .promo-card:hover .promo-image {
+    filter: drop-shadow(0 0 15px #99bbff);
+  }
+
+  .promo-title {
+    margin: 1.5rem 0 2rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    text-shadow:
+      0 0 6px #88aaff,
+      0 0 12px #6699ff;
+  }
+
+  /* Neon button */
+  .btn-daftar {
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.7rem 2.5rem;
+    border: 2px solid #6789ff;
+    background: transparent;
+    border-radius: 50px;
+    color: #edbfe9;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    box-shadow:
+      0 0 8px #6789ff,
+      inset 0 0 10px #6789ff;
+    transition: all 0.3s ease;
+    outline-offset: 3px;
+  }
+
+  .btn-daftar:hover, .btn-daftar:focus {
+    background: linear-gradient(45deg, #5a85ff, #8ab1ff);
+    color: #0f1646;
+    border-color: transparent;
+    box-shadow:
+      0 0 20px #7f9aff,
+      inset 0 0 20px #7f9aff;
+    outline: none;
+    transform: scale(1.05);
+  }
+
+  .btn-daftar:active {
+    transform: scale(0.95);
+  }
+</style>
+</head>
+<body>
+  <section class="promo-card" aria-label="Kartu Promosi">
+    <img class="promo-image" src="The one and only skincare with oxybiome in….jpeg" alt="Gambar Produk Promosi" />
+    <h2 class="promo-title">Penawaran Terbatas!</h2>
+    <button class="btn-daftar" type="button" aria-label="Daftar Sekarang">Daftar Sekarang</button>
+  </section>
+</body>
+</html>
