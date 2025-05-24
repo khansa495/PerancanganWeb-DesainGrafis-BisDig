@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wireframe - Homepage Konsultasi Kesehatan</title>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background: #f8f9fa;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+  }
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  header .login-btn {
+    background: #ffc107;
+    color: #000;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .hero {
+    display: flex;
+    background: white;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  .hero-text {
+    flex: 1;
+    padding-right: 30px;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .hero-text button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.4);
+  }
+  .hero-text button:hover {
+    background: #218838;
+  }
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-image img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .section {
+    margin-top: 40px;
+    background: white;
+    border-radius: 8px;
+    padding: 30px 20px;
+  }
+  .section h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  .features {
+    display: flex;
+    justify-content: space-around;
+  }
+  .feature-item {
+    text-align: center;
+    max-width: 200px;
+  }
+  .feature-item div.icon {
+    font-size: 3rem;
+    color: #28a745;
+    margin-bottom: 12px;
+  }
+  .feature-item h3 {
+    margin-bottom: 8px;
+    color: #333;
+  }
+  .feature-item p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  .testimonials blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #007bff;
+    padding-left: 16px;
+    margin-bottom: 20px;
+  }
+  footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #343a40;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+  }
+  footer a {
+    color: #ffc107;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  /* Annotation styles */
+  .annotation {
+    font-size: 0.85rem;
+    color: #666;
+    background: #e9ecef;
+    border-left: 4px solid #007bff;
+    margin-top: 6px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    max-width: 500px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">HealthConsult</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Layanan</a>
+    <a href="#">Konsultasi</a>
+    <a href="#">Tentang</a>
+    <a href="#">Kontak</a>
+  </nav>
+  <button class="login-btn">Login / Daftar</button>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Konsultasi Kesehatan Online dengan Ahli Terpercaya</h1>
+    <p>Dapatkan akses mudah ke dokter dan tenaga medis profesional dimana saja dan kapan saja.</p>
+    <button>Mulai Konsultasi</button>
+    <div class="annotation">
+      <strong>Anotasi:</strong> Judul utama dengan hierarki visual paling dominan. <br />
+      Tombol CTA dengan warna kontras hijau menonjol untuk aksi utama. <br />
+      Whitespace di sekitar untuk menghindari kepadatan.
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1588776814546-0aa53c1b7a6d?auto=format&fit=crop&w=400&q=80" alt="Ilustrasi konsultasi kesehatan" />
+    <div class="annotation" style="max-width: 300px;">
+      <strong>Anotasi:</strong> Gambar pendukung memperkuat pesan utama. Proporsi seimbang dengan teks.
+    </div>
+  </div>
+</div>
+
+<div class="section features">
+  <h2>Fitur Layanan Kami</h2>
+  <div class="feature-item">
+    <div class="icon">👩‍⚕️</div>
+    <h3>Konsultasi Dokter</h3>
+    <p>Bicara langsung dengan dokter melalui chat atau video call.</p>
+  </div>
+  <div class="feature-item">
+    <div class="icon">📚</div>
+    <h3>Artikel Kesehatan</h3>
+    <p>Akses ribuan artikel terpercaya untuk gaya hidup sehat.</p>
+  </div>
+  <div class="feature-item">
+    <div class="icon">📅</div>
+    <h3>Jadwal Janji Temu</h3>
+    <p>Atur jadwal konsultasi yang fleksibel sesuai kebutuhan Anda.</p>
+  </div>
+  <div class="annotation" style="max-width: 700px; margin-top: 30px;">
+    <strong>Anotasi:</strong> Ikon dan teks tersusun berurutkan memperkuat hierarki visual dan memudahkan pemahaman. <br />
+    Kontras warna hijau ikon untuk menarik perhatian. <br />
+    Ruang antar item cukup memberikan tata letak yang rapi tanpa padat.
+  </div>
+</div>
+
+<div class="section testimonials">
+  <h2>Testimoni Pengguna</h2>
+  <blockquote>“Layanan yang sangat membantu! Dokternya ramah dan mudah diakses. Sangat direkomendasikan.”</blockquote>
+  <blockquote>“Sangat praktis dan cepat, saya bisa konsultasi tanpa harus keluar rumah.”</blockquote>
+  <div class="annotation" style="max-width: 600px; margin-top: 20px;">
+    <strong>Anotasi:</strong> Testimoni memberi kepercayaan sosial, dibatasi dengan garis dan margin agar mudah dibaca.
+  </div>
+</div>
+
+<footer>
+  &copy; 2024 HealthConsult. <a href="#">Privasi</a> | <a href="#">Syarat & Ketentuan</a> | <a href="#">Sosial Media</a>
+</footer>
+</body>
+</html>
