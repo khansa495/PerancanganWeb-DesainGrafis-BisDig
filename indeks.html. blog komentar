@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blog dengan Komentar Dinamis</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: #ebc2e7;
+    color: #1e1c1d;
+  }
+  h1 {
+    color: #502c49;
+    text-align: center;
+  }
+  .post {
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  .comments {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #2980b9;
+    display: none; /* hidden by default */
+    animation: fadeIn 0.3s ease forwards;
+  }
+  .comment {
+    margin-bottom: 1rem;
+  }
+  .btn-toggle {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1.25rem;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  .btn-toggle:hover {
+    background-color: #1c5980;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+</style>
+</head>
+<body>
+  <h1>Blog desain grafis</h1>
+  <article class="post">
+    <h2>DESAIN GRAFIS</h2>
+    <p>
+      Blog ini berisi berbagai informasi mengenai desain grafis, apapun pertanyaannya temukan jawaban kamu disini!!.
+    </p>
+
+    <button class="btn-toggle" id="toggleCommentsBtn">Tampilkan Komentar</button>
+
+    <section class="comments" id="commentsSection">
+      <div class="comment">
+        <strong>Lutfiya:</strong> desain mu menarik!!
+      </div>
+      <div class="comment">
+        <strong>Bunga:</strong> Saya menyukai desain ini.
+      </div>
+      <div class="comment">
+        <strong>Citra:</strong> Terimakasih untuk tutorialnya.
+      </div>
+    </section>
+  </article>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleCommentsBtn');
+    const comments = document.getElementById('commentsSection');
+
+    toggleBtn.addEventListener('click', () => {
+      // If comments are hidden
+      if (comments.style.display === 'none' || comments.style.display === '') {
+        comments.style.display = 'block';
+        toggleBtn.textContent = 'Sembunyikan Komentar';
+      } else {
+        comments.style.display = 'none';
+        toggleBtn.textContent = 'Tampilkan Komentar';
+      }
+    });
+  </script>
+</body>
+</html>
+
