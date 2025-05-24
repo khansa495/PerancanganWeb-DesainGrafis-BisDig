@@ -1,28 +1,28 @@
 # PerancanganWeb-DesainGrafis-BisDig
 
-## 📷 Profil Fotografer Profesional
+Repository ini berisi contoh kode dan penjelasan terkait perancangan web dan desain grafis, termasuk interaktivitas, responsive design, prinsip UI/UX, dan struktur HTML5.
 
-Halaman ini dibuat sebagai tugas untuk mata kuliah *Perancangan Web dan Desain Grafis* dalam program studi dan Bisnis Digital.
+## NO 1: Menambahkan Tombol "Tampilkan Komentar"
+- Kode HTML dan JavaScript untuk menampilkan dan menyembunyikan komentar.
+- Menggunakan event listener untuk interaktivitas.
 
-### ✅ Fitur Halaman
+## NO 2: Responsive Design dan Media Queries
+- Penjelasan tentang responsive design dan penggunaan media queries.
+- Contoh CSS untuk membuat layout gambar menjadi fleksibel.
 
-- Menampilkan nama dan profesi fotografer
-- Deskripsi singkat tentang pengalaman
-- Galeri dua gambar contoh karya fotografi
-- Tautan ke media sosial profesional (Instagram)
+## NO 3: Prinsip UI/UX dan Wireframe
+- Penjelasan tentang prinsip UI/UX dan dasar desain grafis.
+- Wireframe kasar untuk homepage layanan konsultasi kesehatan.
 
-### 📄 Struktur File
+## NO 4: Manfaat Prototipe Desain
+- Penjelasan tentang manfaat membuat prototipe desain sebelum implementasi.
+- Contoh kode HTML untuk komponen "PromoCard".
 
-- `index.html` – Halaman utama dengan struktur HTML5
-- `style.css` – File CSS untuk memperindah tampilan (opsional)
-- `images/` – Folder berisi gambar-gambar galeri
-- `README.md` – Penjelasan proyek dan struktur
+## NO 5: Struktur Dasar HTML5 untuk Halaman Profil
+- Penjelasan tentang struktur dasar HTML5 untuk halaman profil fotografer.
+- Contoh kode HTML yang mencakup elemen header, main, section, dan footer.
 
-### 🔗 Contoh Tautan Media Sosial
-
-- [Instagram](https://instagram.com/Khansarayyani)
----
-
-📌 *Dibuat oleh: Khansa Rayyani Aulia
-🎓 *Kelas: Perancangan Web dan Desain Grafis - Bisnis Digital*  
-📅 *Tahun: 2025*
+## Cara Menggunakan
+1. Clone repository ini.
+2. Buka file HTML atau CSS di browser untuk melihat hasilnya.
+3. Modifikasi sesuai kebutuhan Anda.
