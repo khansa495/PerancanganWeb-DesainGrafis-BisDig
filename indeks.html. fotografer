@@ -1,38 +1,275 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Fotografer Profesional</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil Fotografer Profesional dengan Galeri</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fafafa;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: linear-gradient(90deg, #004d40, #00796b);
+      color: white;
+      padding: 2.5rem 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 3rem;
+      letter-spacing: 1.5px;
+      line-height: 1.2;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.4rem;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1000px;
+      margin: 2.5rem auto 3rem;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    /* Profile Section */
+    section.profile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+    section.profile img {
+      width: 280px;
+      max-width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 6px 20px rgba(0, 121, 107, 0.3);
+      border: 8px solid #00796b;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+    section.profile img:hover,
+    section.profile img:focus {
+      outline: none;
+      transform: scale(1.05);
+      box-shadow: 0 12px 34px rgba(180, 250, 242, 0.6);
+      cursor: pointer;
+    }
+    section.profile .description {
+      max-width: 600px;
+      flex: 1 1 300px;
+    }
+    section.profile .description h2 {
+      margin: 0 0 1rem 0;
+      font-size: 2.25rem;
+      color: #004d40;
+      font-weight: 700;
+    }
+    section.profile .description p {
+      font-size: 1.15rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* Gallery Section */
+    section.gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    section.gallery h2 {
+      grid-column: 1/-1;
+      font-size: 2rem;
+      color: #43a392;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    section.gallery figure {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 121, 107, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section.gallery figure:hover,
+    section.gallery figure:focus-within {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 121, 107, 0.6);
+      outline: none;
+    }
+    section.gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      border-radius: 15px;
+      transition: transform 0.5s ease;
+    }
+    section.gallery figure:hover img,
+    section.gallery figure:focus-within img {
+      transform: scale(1.1);
+    }
+    section.gallery figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 15px;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      user-select: none;
+    }
+    section.gallery figure:hover figcaption,
+    section.gallery figure:focus-within figcaption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      background: #004d40;
+      padding: 1.5rem 1rem;
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+      box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    footer nav a {
+      color: #448072;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    footer nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background: #67ac9c;
+      transition: width 0.3s ease;
+    }
+    footer nav a:hover,
+    footer nav a:focus {
+      color: #80cbc4;
+      outline: none;
+    }
+    footer nav a:hover::after,
+    footer nav a:focus::after {
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      section.profile {
+        flex-direction: column;
+        text-align: center;
+      }
+      section.profile .description {
+        max-width: 100%;
+      }
+      section.profile img {
+        margin-bottom: 1.5rem;
+      }
+      section.gallery h2 {
+        font-size: 1.75rem;
+      }
+      section.gallery figure img {
+        height: 140px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Khansa Rayyani</h1>
-        <p>Fotografer Profesional | Spesialis Potret & Landscape</p>
-    </header>
+  <header>
+    <h1>Khansa Rayyani</h1>
+    <p>Fotografer Profesional</p>
+  </header>
 
-    <main>
-        <section id="about">
-            <h2>Khansa Rayyani adalah seorang fotografer profesional yang telah menekuni dunia fotografi selama lebih dari 10 tahun. Berbekal pengalaman dan dedikasi tinggi dalam bidang ini, ia telah menghasilkan berbagai karya fotografi yang mencakup potret, pernikahan, komersial, hingga dokumenter.</h2>
-            <p>.</p>
-        </section>
+  <main>
+    <section class="profile" aria-label="Profil fotografer">
+      <img 
+        src="profil pemandangan.jpg" 
+        alt="Foto John Doe" 
+        tabindex="0"
+      />
+      <div class="description">
+        <h2>Tentang Khansa Rayyani</h2>
+        <p>
+Saya adalah seorang fotografer pemandangan dengan pengalaman lebih dari 10 tahun di dunia fotografi profesional. Selama perjalanan karier saya, saya telah mengkhususkan diri dalam menangkap keindahan alam melalui lensa, dengan fokus pada komposisi visual yang kuat dan pencahayaan alami. Dalam berbagai proyek, saya berkolaborasi dengan tim yang solid dan berpengalaman, yang mendukung visi artistik saya dalam menghadirkan karya-karya fotografi lanskap yang autentik dan berdampak.
+        </p>
+      </div>
+    </section>
 
-        <section id="gallery">
-            <h2>Galeri</h2>
-            <img src="foto uts .jpg" alt="Acara Pernikahan" />
-            <img src="foto uts 2.jpg" alt="Acara Pernikahan" />
-        </section>
+    <section class="gallery" aria-label="Galeri karya foto John Doe">
+      <h2>Galeri Karya</h2>
+      <figure tabindex="0">
+        <img src="pemandangan 1.jpeg" alt="Foto lanskap pegunungan" />
+        <figcaption>Danau yang tenang</figcaption>
+      </figure>
+      <figure tabindex="0">
+        <img src="pemandangan 2.jpeg" alt="Potret wanita di cahaya matahari" />
+        <figcaption>Potret hewan lucu</figcaption>
+      </figure>
+      <figure tabindex="0">
+        <img src="pemandangan 3.jpeg" alt="Foto alam dengan pohon dan kabut" />
+        <figcaption>Kabut di pagi hari</figcaption>
+      </figure>
+      <figure tabindex="0">
+        <img src="pemandangan 4.jpeg" alt="Foto urban di malam hari" />
+        <figcaption>Pantai di siang hari</figcaption>
+      </figure>
+      <figure tabindex="0">
+        <img src="pemandangan 5.jpeg" alt="Foto makanan artistik" />
+        <figcaption>Pegunungan indah</figcaption>
+      </figure>
+      <figure tabindex="0">
+        <img src="pemandangan 6.jpeg" alt="Potret anak-anak bermain" />
+        <figcaption>Bukit Bukit yang tinggi</figcaption>
+      </figure>
+    </section>
+  </main>
 
-        <section id="social">
-            <h2>Media Sosial</h2>
-            <ul>
-                <li><a href="https://instagram.com/khansarayyani" target="_blank">Instagram</a></li>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Khansa Rayyani. Semua hak dilindungi.</p>
-    </footer>
+  <footer>
+    <nav aria-label="Tautan media sosial John Doe">
+      <a href="https://instagram.com/khansarayyani" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </nav>
+  </footer>
 </body>
 </html>
